@@ -1,40 +1,44 @@
 declare module "@txo-peer-dep/log" {
-
-    declare interface Options {
+    import { 
+        Level,
+        WriteLog
+     } from '@txo-peer-dep/log/Config'
+    interface Options {
         important: boolean;
-    };
-    declare class Log {
+    }
+    class Log {
         constructor(namespace: string, level?: Level);
-        error (message: string, payload?: any, options?: Options);
-        warning (message: string, payload?: any, options?: Options);
-        info(message: string, payload?: any, options?: Options);
-        debug (message: string, payload?: any, options?: Options);
+        error (message: string, payload?: any, options?: Options): void;
+        warning (message: string, payload?: any, options?: Options): void;
+        info(message: string, payload?: any, options?: Options): void;
+        debug (message: string, payload?: any, options?: Options): void;
         errorProxy <RESULT> (message: string, result: RESULT, options?: Options): RESULT;
         warningProxy <RESULT> (message: string, result: RESULT, options?: Options): RESULT;
         infoProxy <RESULT> (message: string, result: RESULT, options?: Options): RESULT
         debugProxy <RESULT> (message: string, result: RESULT, options?: Options): RESULT;
-        errorLazy (message: string, payloadCallback: () => any, options?: Options);
-        warningLazy (message: string, payloadCallback: () => any, options?: Options);
-        infoLazy (message: string, payloadCallback: () => any, options?: Options);
-        debugLazy (message: string, payloadCallback: () => any, options?: Options);
+        errorLazy (message: string, payloadCallback: () => any, options?: Options): void;
+        warningLazy (message: string, payloadCallback: () => any, options?: Options): void;
+        infoLazy (message: string, payloadCallback: () => any, options?: Options): void;
+        debugLazy (message: string, payloadCallback: () => any, options?: Options): void;
     }
+
 }
 
 declare module "@txo-peer-dep/log/Config" {
     import { ConfigManager } from '@txo/config-manager'
-    declare interface LoggerConfig {
+    interface LoggerConfig {
         writeLog: WriteLog;
         nodeEnvironmentList: string[];
-    };
+    }
 
-    declare interface LoggerConfigMap {
-        [string]: LoggerConfig;
-    };
+    interface LoggerConfigMap {
+        [key: string]: LoggerConfig;
+    }
 
-    declare interface Config {
+    interface Config {
         loggerConfigMap?: LoggerConfigMap;
         defaultLevelForNodeEnvironmentMap?: {
-            [string]: Level;
+            [key: string]: Level;
         };
         defaultLevelForUnknownNodeEnvironment: Level;
         levelOverride?: {
@@ -43,14 +47,18 @@ declare module "@txo-peer-dep/log/Config" {
         };
         payloadProcessor: (payload?: any) => any;
     }
-    declare var configManager: ConfigManager<Config>;
-    declare enum levels {
+    var configManager: ConfigManager<Config>;
+    enum levels {
         NONE = 0,
         ERROR = 1,
         WARNING = 2,
         INFO = 3,
         DEBUG = 4,
-    };
+    }
 
-    declare type Level = levels;
+    type Level = levels;
+    type Options = {
+        important: boolean,
+      }
+    type WriteLog = (level: Level, name: string, namespace: string, message: string, payload?: any, options?: Options) => void
 }
