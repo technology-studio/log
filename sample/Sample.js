@@ -6,7 +6,7 @@
  * @flow
  */
 
-import { Log } from '../lib/' // '@txo-peer-dep/log
+import { Log } from '../packages/@txo-peer-dep/log/src' // '@txo-peer-dep/log
 
 const log = new Log('namespace.namespace.namespace.Sample')
 

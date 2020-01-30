@@ -6,8 +6,6 @@
  * @flow
  */
 
-'use strict'; // eslint-disable-line
-
 export const levels = {
   NONE: 0,
   ERROR: 1,

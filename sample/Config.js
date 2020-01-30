@@ -8,9 +8,9 @@
 
 import {
   configManager,
-  type WriteLog,
   levels,
-} from '../lib/Config' // '@txo-peer-dep/log/Config'
+  type WriteLog,
+} from '../packages/@txo-peer-dep/log/src/Config'
 
 const sampleWriteLog: WriteLog = (level, name, namespace, message, payload, options) => {
   console.log(level, name, namespace, message, payload)
@@ -18,15 +18,15 @@ const sampleWriteLog: WriteLog = (level, name, namespace, message, payload, opti
 
 configManager.update({
   loggerConfigMap: {
-    'sampleLogger': {
+    sampleLogger: {
       writeLog: sampleWriteLog,
       nodeEnvironmentList: ['production', 'development'],
     },
   },
   defaultLevelForUnknownNodeEnvironment: levels.NONE, // optional, configuration default
   defaultLevelForNodeEnvironmentMap: {
-    'production': levels.ERROR,
-    'development': levels.INFO,
+    production: levels.ERROR,
+    development: levels.INFO,
   },
   levelOverride: {
     level: levels.DEBUG,

@@ -6,8 +6,6 @@
  * @flow
  */
 
-'use strict'; // eslint-disable-line
-
 import { ConfigManager } from '@txo/config-manager'
 import {
   type Level,
