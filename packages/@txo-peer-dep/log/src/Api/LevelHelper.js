@@ -6,15 +6,13 @@
  * @flow
  */
 
-'use strict'; // eslint-disable-line
-
 import { configManager } from '../Config'
 import type { Level } from '../Model/Types'
 
 const breakableReduce = <ACCUMULATOR, VALUE> (
   array: VALUE[],
   callback: (accumulator?: ACCUMULATOR, value: VALUE) => { break: boolean, accumulator?: ACCUMULATOR },
-  initial?: ACCUMULATOR
+  initial?: ACCUMULATOR,
 ): ?ACCUMULATOR => {
   var current = {
     break: false,

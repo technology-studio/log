@@ -6,8 +6,6 @@
  * @flow
  */
 
-'use strict'; // eslint-disable-line
-
 const SUPPRESSED_ARRAY = '[SUPPRESSED]'
 const SUPPRESSED_OBJECT = '{SUPPRESSED}'
 const CYCLIC_ARRAY = '[CYCLIC]'
