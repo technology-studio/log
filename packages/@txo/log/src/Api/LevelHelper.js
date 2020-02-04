@@ -6,8 +6,10 @@
  * @flow
  */
 
-import { configManager } from '../Config'
-import type { Level } from '../Model/Types'
+import {
+  configManager,
+  type Level,
+} from '@txo-peer-dep/log'
 
 const breakableReduce = <ACCUMULATOR, VALUE> (
   array: VALUE[],

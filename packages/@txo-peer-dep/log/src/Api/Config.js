@@ -12,11 +12,11 @@ import {
   type Options,
   type WriteLog,
   levels,
-} from './Model/Types'
+} from '../Model/Types'
+
 import {
   payloadProcessor,
-  payloadProcessorReact,
-} from './Api/Utils'
+} from './Utils'
 
 export type {
   Level,
@@ -26,7 +26,6 @@ export type {
 export {
   levels,
   payloadProcessor,
-  payloadProcessorReact,
 }
 
 type LoggerConfig = {
@@ -58,14 +57,4 @@ export const configManager: ConfigManager<Config> = new ConfigManager({
 
 export const isNodeEnvironmentEnabled = (loggerConfig?: LoggerConfig): boolean => (
   !!(loggerConfig && process.env.NODE_ENV && loggerConfig.nodeEnvironmentList.indexOf(process.env.NODE_ENV) !== -1)
-)
-
-export const isLoggerEnabled = (loggerKey: string): boolean => (
-  isNodeEnvironmentEnabled(configManager.config.loggerConfigMap && configManager.config.loggerConfigMap[loggerKey])
-)
-
-export const getDefaultLevel = (): Level => (
-  configManager.config.defaultLevelForNodeEnvironmentMap && process.env.NODE_ENV
-    ? configManager.config.defaultLevelForNodeEnvironmentMap[process.env.NODE_ENV]
-    : configManager.config.defaultLevelForUnknownNodeEnvironment
 )

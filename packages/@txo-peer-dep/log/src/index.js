@@ -7,16 +7,34 @@
  */
 
 import {
+  configManager,
+  isNodeEnvironmentEnabled,
+} from './Api/Config'
+import { logManager } from './Api/LogManager'
+import {
+  suppressFreezing,
+  CYCLIC_ARRAY,
+  CYCLIC_OBJECT,
+} from './Api/Utils'
+import {
   type Level,
+  type Options,
+  type WriteLog,
   levels,
 } from './Model/Types'
-import { Log } from './Api/Log'
 
 export {
+  configManager,
+  CYCLIC_ARRAY,
+  CYCLIC_OBJECT,
+  isNodeEnvironmentEnabled,
   levels,
-  Log,
+  logManager,
+  suppressFreezing,
 }
 
 export type {
   Level,
+  Options,
+  WriteLog,
 }
