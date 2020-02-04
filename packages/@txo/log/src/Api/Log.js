@@ -7,16 +7,14 @@
  */
 
 import {
-  getDefaultLevel,
+  logManager,
   configManager,
-} from '../Config'
-
-import { logManager } from './LogManager'
-import {
   type Options,
   type Level,
   levels,
-} from '../Model/Types'
+} from '@txo-peer-dep/log'
+
+import { getDefaultLevel } from './Config'
 import { getLevelOverride } from './LevelHelper'
 
 export class Log {

@@ -16,7 +16,7 @@ import {
   configManager,
   isNodeEnvironmentEnabled,
   type Config,
-} from '../Config'
+} from './Config'
 
 class LogManager {
   _writeLogList: WriteLog[]
