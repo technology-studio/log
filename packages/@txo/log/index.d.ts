@@ -1,4 +1,10 @@
 declare module "@txo/log" {
+  import {
+    Level,
+  } from '@txo-peer-dep/log'
+  interface Options {
+    important: boolean;
+  }
   class Log {
     constructor(namespace: string, level?: Level);
     error (message: string, payload?: any, options?: Options): void;

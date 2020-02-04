@@ -1,12 +1,4 @@
 declare module "@txo-peer-dep/log" {
-    import { 
-        Level,
-        WriteLog
-     } from '@txo-peer-dep/log/Config'
-    interface Options {
-        important: boolean;
-    }
-
     import { ConfigManager } from '@txo/config-manager'
     interface LoggerConfig {
         writeLog: WriteLog;
