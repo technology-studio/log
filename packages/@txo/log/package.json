@@ -1,6 +1,6 @@
 {
   "name": "@txo/log",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Technology Studio - Log",
   "main": "lib/index.js",
   "typings": "index.d.ts",
@@ -28,6 +28,6 @@
   "dependencies": {
   },
   "peerDependencies": {
-    "@txo-peer-dep/log": "^2.1.0"
+    "@txo-peer-dep/log": "^3.0.0"
   }
 }
