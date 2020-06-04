@@ -10,7 +10,7 @@ import {
   configManager,
   levels,
   type WriteLog,
-} from '@txo-peer-dep/log/src'
+} from '@txo-peer-dep/log'
 
 const sampleWriteLog: WriteLog = (level, name, namespace, message, payload, options) => {
   console.log(level, name, namespace, message, payload)
