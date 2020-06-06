@@ -19,7 +19,7 @@
     "lint": "eslint --format=node_modules/eslint-formatter-pretty .",
     "fixcode": "eslint --format=node_modules/eslint-formatter-pretty . --fix",
     "git-hook": "yarn -s lint && yarn flow check",
-    "sanity": "yarn lint && yarn flow check && yarn test"
+    "sanity": "yarn lint && yarn flow check && yarn test && yarn outdated && echo 'successs'"
   },
   "workspaces": [
     "packages/@txo/*",
@@ -68,6 +68,7 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
+      "<rootDir>/__tests__/Config/",
       "<rootDir>/__tests__/Setup.js",
       "<rootDir>/__tests__/Utils/"
     ],
