@@ -1,20 +1,18 @@
 /**
- * @Author: Rostislav Simonik <rostislav.simonik>
+ * @Author: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
  * @Date:   2018-11-12T15:46:02+01:00
- * @Email:  rostislav.simonik@technologystudio.sk
  * @Copyright: Technology Studio
- * @flow
- */
+**/
 
-import { Log } from '@txo/log'
+import { Log } from '@txo/log/src'
 
 const log = new Log('namespace.namespace.namespace.Sample')
 
-const sampleGetValue = () => 1
+const sampleGetValue = (): number => 1
 
-const sampleGetValueComplexCalculation = () => {
-  var result = 0
-  for (var index = 0; index < 1_000_000_000; index++) {
+const sampleGetValueComplexCalculation = (): number => {
+  let result = 0
+  for (let index = 0; index < 1_000_000_000; index++) {
     result += index
   }
   return result

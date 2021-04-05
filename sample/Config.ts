@@ -1,15 +1,13 @@
 /**
- * @Author: Rostislav Simonik <rostislav.simonik>
+ * @Author: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
  * @Date:   2018-11-12T15:41:36+01:00
- * @Email:  rostislav.simonik@technologystudio.sk
  * @Copyright: Technology Studio
- * @flow
- */
+**/
 
 import {
   configManager,
-  levels,
-  type WriteLog,
+  Level,
+  WriteLog,
 } from '@txo-peer-dep/log'
 
 const sampleWriteLog: WriteLog = (level, name, namespace, message, payload, options) => {
@@ -23,13 +21,13 @@ configManager.update({
       nodeEnvironmentList: ['production', 'development'],
     },
   },
-  defaultLevelForUnknownNodeEnvironment: levels.NONE, // optional, configuration default
+  defaultLevelForUnknownNodeEnvironment: Level.NONE, // optional, configuration default
   defaultLevelForNodeEnvironmentMap: {
-    production: levels.ERROR,
-    development: levels.INFO,
+    production: Level.ERROR,
+    development: Level.INFO,
   },
   levelOverride: {
-    level: levels.DEBUG,
+    level: Level.DEBUG,
     namespacePatternList: [
       'namespace.namespace', // given pattern is compared as prefix, overrides logs with given prefix
       'namespace.namespace.namespace.Sample', // in this case, exact match

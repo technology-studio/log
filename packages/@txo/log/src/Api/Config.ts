@@ -1,19 +1,17 @@
 /**
- * @Author: Rostislav Simonik <rostislav.simonik>
+ * @Author: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
  * @Date:   2017-12-28T08:25:08+01:00
- * @Email:  rostislav.simonik@technologystudio.sk
  * @Copyright: Technology Studio
- * @flow
- */
+**/
 
 import {
   configManager,
   isNodeEnvironmentEnabled,
-  type Level,
+  Level,
 } from '@txo-peer-dep/log'
 
 export const isLoggerEnabled = (loggerKey: string): boolean => (
-  isNodeEnvironmentEnabled(configManager.config.loggerConfigMap && configManager.config.loggerConfigMap[loggerKey])
+  isNodeEnvironmentEnabled(configManager.config.loggerConfigMap?.[loggerKey])
 )
 
 export const getDefaultLevel = (): Level => (

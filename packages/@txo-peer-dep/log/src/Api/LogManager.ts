@@ -1,36 +1,35 @@
 /**
- * @Author: Rostislav Simonik <rostislav.simonik>
+ * @Author: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
  * @Date:   2017-12-27T11:07:00+01:00
- * @Email:  rostislav.simonik@technologystudio.sk
  * @Copyright: Technology Studio
- * @flow
- */
+**/
 
 import type {
   Level,
   Options,
   WriteLog,
+  Payload,
 } from '../Model/Types'
 
 import {
   configManager,
   isNodeEnvironmentEnabled,
-  type Config,
+  Config,
 } from './Config'
 
 class LogManager {
-  _writeLogList: WriteLog[]
+  _writeLogList!: WriteLog[]
 
   constructor () {
     this.syncFromConfig(configManager.config)
     configManager.subscribe(this.onConfigChange)
   }
 
-  onConfigChange = (config: Config) => {
+  onConfigChange = (config: Config): void => {
     this.syncFromConfig(config)
   }
 
-  syncFromConfig (config: Config) {
+  syncFromConfig (config: Config): void {
     this._writeLogList = []
     if (config.loggerConfigMap) {
       const loggerConfigMap = config.loggerConfigMap
@@ -43,11 +42,11 @@ class LogManager {
     }
   }
 
-  writeLog (level: Level, name: string, namespace: string, message: string, payload?: any, options?: Options) {
+  writeLog (level: Level, name: string, namespace: string, message: string, payload?: Payload, options?: Options): void {
     this._writeLogList.forEach(writeLog => writeLog(level, name, namespace, message, payload, options))
   }
 
-  registerWriteLog (writeLog: WriteLog) {
+  registerWriteLog (writeLog: WriteLog): () => void {
     this._writeLogList.push(writeLog)
     return () => { this._writeLogList = this._writeLogList.filter(_writeLog => _writeLog !== writeLog) }
   }
