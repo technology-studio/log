@@ -4,11 +4,11 @@
  * @Copyright: Technology Studio
 **/
 
+import type { Payload } from '@txo-peer-dep/log'
 import {
   suppressFreezing,
   CYCLIC_ARRAY,
   CYCLIC_OBJECT,
-  Payload,
 } from '@txo-peer-dep/log'
 
 const SUPPRESSED_ARRAY = '[SUPPRESSED]'
