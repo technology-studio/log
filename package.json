@@ -14,7 +14,7 @@
     "url": "https://github.com/technology-studio/"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "yarn build:clean && yarn build:lib",
     "build:clean": "yarn rimraf lib",
