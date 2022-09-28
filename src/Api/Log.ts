@@ -4,12 +4,14 @@
  * @Copyright: Technology Studio
 **/
 
+import type {
+  Options,
+  Payload,
+} from '@txo-peer-dep/log'
 import {
   logManager,
   configManager,
-  Options,
   Level,
-  Payload,
 } from '@txo-peer-dep/log'
 
 import { getDefaultLevel } from './Config'

@@ -4,9 +4,9 @@
  * @Copyright: Technology Studio
 **/
 
+import type { Level } from '@txo-peer-dep/log'
 import {
   configManager,
-  Level,
 } from '@txo-peer-dep/log'
 
 const breakableReduce = <ACCUMULATOR, VALUE> (
@@ -30,9 +30,7 @@ const breakableReduce = <ACCUMULATOR, VALUE> (
 export const getLevelOverride = (namespace: string): Level | undefined => {
   const levelOverride = configManager.config.levelOverride
 
-  return levelOverride && breakableReduce<Level, string>(levelOverride.namespacePatternList, (level, namespacePattern) => {
-    return namespace.startsWith(namespacePattern)
-      ? { break: true, accumulator: levelOverride.level }
-      : { break: false }
-  })
+  return levelOverride && breakableReduce<Level, string>(levelOverride.namespacePatternList, (level, namespacePattern) => namespace.startsWith(namespacePattern)
+    ? { break: true, accumulator: levelOverride.level }
+    : { break: false })
 }

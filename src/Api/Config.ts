@@ -4,10 +4,10 @@
  * @Copyright: Technology Studio
 **/
 
+import type { Level } from '@txo-peer-dep/log'
 import {
   configManager,
   isNodeEnvironmentEnabled,
-  Level,
 } from '@txo-peer-dep/log'
 
 export const isLoggerEnabled = (loggerKey: string): boolean => (
