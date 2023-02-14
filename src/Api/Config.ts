@@ -15,7 +15,7 @@ export const isLoggerEnabled = (loggerKey: string): boolean => (
 )
 
 export const getDefaultLevel = (): Level => (
-  configManager.config.defaultLevelForNodeEnvironmentMap && process.env.NODE_ENV
+  (configManager.config.defaultLevelForNodeEnvironmentMap != null) && (process.env.NODE_ENV != null && process.env.NODE_ENV !== '')
     ? configManager.config.defaultLevelForNodeEnvironmentMap[process.env.NODE_ENV]
     : configManager.config.defaultLevelForUnknownNodeEnvironment
 )
