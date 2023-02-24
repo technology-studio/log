@@ -15,7 +15,7 @@ const SUPPRESSED_ARRAY = '[SUPPRESSED]'
 const SUPPRESSED_OBJECT = '{SUPPRESSED}'
 
 export const suppressFreezingReact = (payload?: Payload, parents: unknown[] = []): Payload => {
-  if (payload) {
+  if (payload != null) {
     const _parents = [...parents, payload]
     if (Array.isArray(payload)) {
       if (parents.includes(payload)) {
@@ -31,11 +31,11 @@ export const suppressFreezingReact = (payload?: Payload, parents: unknown[] = []
       }
       const { children, ...rest } = payload
 
-      const restSuppressed = rest && Object.keys(rest).reduce((result: Record<string, unknown>, key) => {
+      const restSuppressed = rest != null && Object.keys(rest).reduce((result: Record<string, unknown>, key) => {
         result[key] = suppressFreezing(rest[key], _parents)
         return result
       }, {})
-      return children ? { children: SUPPRESSED_ARRAY, ...restSuppressed } : { ...restSuppressed }
+      return children != null ? { children: SUPPRESSED_ARRAY, ...restSuppressed } : { ...restSuppressed }
     }
   }
   return payload

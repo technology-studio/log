@@ -30,7 +30,9 @@ const breakableReduce = <ACCUMULATOR, VALUE> (
 export const getLevelOverride = (namespace: string): Level | undefined => {
   const levelOverride = configManager.config.levelOverride
 
-  return levelOverride && breakableReduce<Level, string>(levelOverride.namespacePatternList, (level, namespacePattern) => namespace.startsWith(namespacePattern)
-    ? { break: true, accumulator: levelOverride.level }
-    : { break: false })
+  return (levelOverride != null)
+    ? breakableReduce<Level, string>(levelOverride.namespacePatternList, (level, namespacePattern) => namespace.startsWith(namespacePattern)
+      ? { break: true, accumulator: levelOverride.level }
+      : { break: false })
+    : undefined
 }
