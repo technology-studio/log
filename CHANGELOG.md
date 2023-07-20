@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/technology-studio/log/compare/v2.0.1...v2.0.2) (2023-07-20)
+
+
+### Bug fixes
+
+* **deps:** update eslint txo packages ([#315](https://github.com/technology-studio/log/issues/315)) ([dc3f76b](https://github.com/technology-studio/log/commit/dc3f76bcc516d612b1d2aa63020b11d4b2088bf8))
+
 ## [2.0.1](https://github.com/technology-studio/log/compare/v2.0.0...v2.0.1) (2022-09-28)
 
 
