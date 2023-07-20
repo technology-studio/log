@@ -1517,22 +1517,35 @@
   dependencies:
     minimatch "^7.4.2"
 
-"@txo-peer-dep/log@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@txo-peer-dep/log/-/log-4.0.0.tgz#208c7bc82f4580167d1dbf630456576285567cf0"
-  integrity sha512-QWGmBY8fohz4FBll1paDWVT1Gyq8nQ33cjov8Fd6CErnhJMQt7aEpE4220J06Ldp+rvrQXfFnjIZ0JQC1TVsLA==
+"@txo-peer-dep/log@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@txo-peer-dep/log/-/log-4.0.1.tgz#da05983a215b0d9efc7d91ac6f53c8d31529d6fe"
+  integrity sha512-SlEjv1r8mi52Iv6rsHUiO226GxChsKxCA+TeyZ4GoQwG4W+ZVmS+tok9QGEuc2pNn4W8kGk7Cj/i3RCYndf/iQ==
   dependencies:
-    "@txo/config-manager" "^3.0.1"
+    "@txo/config-manager" "^3.1.0"
 
-"@txo/config-manager@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.0.1.tgz#cf6bc6047a67f22eeae763713d28e4c3b446132c"
-  integrity sha512-L8Y8H83zn12fuhhjmwRsDo9Bp6jMiSaUQlbSVcpZHKcfESHpz+m4Mw65s35YP6sAUeFr2I5Gl9xU/Pf7S0JmAQ==
+"@txo/config-manager@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.1.0.tgz#9a38d0ba2b2355f973775bafe884cdbb7225dc0d"
+  integrity sha512-rYSd5Mk4URK3hs7Y5nSXst4KOidmjJPeaNkh+D/L1ndVodvKwXO/rZV00VYXpW71/KSaG1Hj83At3r4WmboKvg==
+
+"@txo/functional@^4.6.1":
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/@txo/functional/-/functional-4.6.1.tgz#2e961533dfeee4150b9dfafb2793944a11b1ca3e"
+  integrity sha512-cUoSFVqZKP728rHcLTxYSM8Bn3+oUb9xNPD6lcJ5TMaf9Vs1dn7gRA+tOa8rpo6ZZYKAFSIVYI0S+AyRV7fQ3Q==
+  dependencies:
+    "@txo/log" "^2.0.1"
+    utility-types "^3.10.0"
 
 "@txo/log-console@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@txo/log-console/-/log-console-3.0.0.tgz#56506a8c6afea9109301ff96520c43815814022d"
   integrity sha512-Dl7dnPMUXRr1JSBysUmzT9/RjMm9FWJdtZ9CXVnh9K4qwpT4fnjDV+GWiHHWAqob47XcE7N98M8rShGmpsukqg==
+
+"@txo/log@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@txo/log/-/log-2.0.1.tgz#fd96044751a9930cf5136a7248ad8989efce756c"
+  integrity sha512-CC+ZkiTbytuNVqvusQFdp72i1G2MhA5ITohxEMEi0qGLGIzxtYT20vYkoFRC8XPbsZydbu9uVtpH5wA/X/g/eg==
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
@@ -3230,10 +3243,9 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-"eslint-config-standard-with-typescript@git+https://github.com/technology-studio-forks/eslint-config-standard-with-typescript.git":
+"eslint-config-standard-with-typescript@https://github.com/technology-studio-forks/eslint-config-standard-with-typescript":
   version "36.0.0"
-  uid "9cae293318a111911178737ae4159896c19aa700"
-  resolved "git+https://github.com/technology-studio-forks/eslint-config-standard-with-typescript.git#9cae293318a111911178737ae4159896c19aa700"
+  resolved "https://github.com/technology-studio-forks/eslint-config-standard-with-typescript#9cae293318a111911178737ae4159896c19aa700"
   dependencies:
     "@typescript-eslint/parser" "^6.0.0"
     eslint-config-standard "17.0.0"
@@ -3248,7 +3260,7 @@ eslint-config-txo-typescript@^3.2.62:
   resolved "https://registry.yarnpkg.com/eslint-config-txo-typescript/-/eslint-config-txo-typescript-3.2.62.tgz#7914cc2bcde601931195d3129ab2fed784b0400a"
   integrity sha512-tWhbaAW6vLGs8L0iEMwtAy49xv2hnk427Zfg6yD2xq+aFUFsG0ouQdR48Vux39NQpvulvClkhN2jxPBhEkMhMQ==
   dependencies:
-    eslint-config-standard-with-typescript "git+https://github.com/technology-studio-forks/eslint-config-standard-with-typescript.git"
+    eslint-config-standard-with-typescript "https://github.com/technology-studio-forks/eslint-config-standard-with-typescript"
     eslint-import-resolver-typescript "^3.5.5"
 
 eslint-formatter-pretty@^5.0.0:
@@ -8472,6 +8484,11 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+utility-types@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.10.0.tgz#ea4148f9a741015f05ed74fd615e1d20e6bed82b"
+  integrity sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
