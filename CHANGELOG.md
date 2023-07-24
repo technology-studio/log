@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/technology-studio/log/compare/v2.0.11...v2.0.12) (2023-07-24)
+
+
+### Bug fixes
+
+* remove `@txo/functional` ([#328](https://github.com/technology-studio/log/issues/328)) ([067567e](https://github.com/technology-studio/log/commit/067567e41d6c98725097ba36644993cf0b921590))
+
 ## [2.0.11](https://github.com/technology-studio/log/compare/v2.0.10...v2.0.11) (2023-07-24)
 
 
