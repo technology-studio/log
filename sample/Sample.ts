@@ -4,6 +4,7 @@
  * @Copyright: Technology Studio
 **/
 
+// eslint-disable-next-line import/no-unresolved
 import { Log } from '@txo/log'
 
 const log = new Log('namespace.namespace.namespace.Sample')

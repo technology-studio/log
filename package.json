@@ -33,9 +33,7 @@
     "semantic-release": "semantic-release",
     "update-boilerplate-version": "./scripts/update-boilerplate-version.sh"
   },
-  "dependencies": {
-    "@txo/functional": "^4.6.10"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@txo-peer-dep/log": "^4.0.1"
   },

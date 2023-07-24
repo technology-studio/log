@@ -10,7 +10,6 @@ import {
   CYCLIC_ARRAY,
   CYCLIC_OBJECT,
 } from '@txo-peer-dep/log'
-import { isObject } from '@txo/functional'
 
 const SUPPRESSED_ARRAY = '[SUPPRESSED]'
 const SUPPRESSED_OBJECT = '{SUPPRESSED}'
@@ -23,14 +22,14 @@ export const suppressFreezingReact = (payload?: Payload, parents: unknown[] = []
         return CYCLIC_ARRAY
       }
       return payload.map(item => suppressFreezing(item, _parents))
-    } else if (isObject(payload)) {
+    } else if (payload != null && typeof payload === 'object') {
       if (parents.includes(payload)) {
         return CYCLIC_OBJECT
       }
       if (Object.prototype.hasOwnProperty.call(payload, 'refs')) {
         return SUPPRESSED_OBJECT
       }
-      const { children, ...rest } = payload
+      const { children, ...rest } = payload as Record<string, unknown>
 
       const restSuppressed = rest != null && Object.keys(rest).reduce((result: Record<string, unknown>, key) => {
         result[key] = suppressFreezing(rest[key], _parents)
