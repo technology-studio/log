@@ -1,3 +1,10 @@
+## [2.0.14](https://github.com/technology-studio/log/compare/v2.0.13...v2.0.14) (2023-11-11)
+
+
+### Bug fixes
+
+* **deps:** update dependency @txo-peer-dep/log to ^4.0.3 ([792050d](https://github.com/technology-studio/log/commit/792050d43c9235c937537804d6436021caff78d7))
+
 ## [2.0.13](https://github.com/technology-studio/log/compare/v2.0.12...v2.0.13) (2023-09-20)
 
 
