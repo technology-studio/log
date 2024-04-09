@@ -1,3 +1,10 @@
+## [2.0.15](https://github.com/technology-studio/log/compare/v2.0.14...v2.0.15) (2024-04-09)
+
+
+### Bug fixes
+
+* add implicit NODE_ENV fallback to development ([#504](https://github.com/technology-studio/log/issues/504)) ([398cb82](https://github.com/technology-studio/log/commit/398cb8277a95abdc5db2850f562fc1a5c2ee9ec8))
+
 ## [2.0.14](https://github.com/technology-studio/log/compare/v2.0.13...v2.0.14) (2023-11-11)
 
 
