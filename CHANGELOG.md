@@ -1,3 +1,10 @@
+## [2.0.16](https://github.com/technology-studio/log/compare/v2.0.15...v2.0.16) (2024-04-09)
+
+
+### Bug fixes
+
+* **deps:** update dependency @txo-peer-dep/log to ^4.0.4 ([b692678](https://github.com/technology-studio/log/commit/b692678b0d95e2388b674dfd2aa58ba8110126b1))
+
 ## [2.0.15](https://github.com/technology-studio/log/compare/v2.0.14...v2.0.15) (2024-04-09)
 
 
