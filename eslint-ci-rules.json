@@ -1,0 +1,10 @@
+[
+  "@typescript-eslint/no-unnecessary-condition",
+  "eslint-comments/require-description",
+  "@typescript-eslint/max-params",
+  "@typescript-eslint/no-magic-numbers",
+  "@typescript-eslint/prefer-destructuring",
+  "@stylistic/space-before-function-paren",
+  "complexity",
+  "@typescript-eslint/no-unsafe-type-assertion"
+]

@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers -- numbers are only used as sample values and loop iteration count */
 /**
  * @Author: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
  * @Date:   2018-11-12T15:46:02+01:00
  * @Copyright: Technology Studio
 **/
 
-// eslint-disable-next-line import/no-unresolved
 import { Log } from '@txo/log'
 
 const log = new Log('namespace.namespace.namespace.Sample')
